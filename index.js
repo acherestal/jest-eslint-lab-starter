@@ -31,3 +31,22 @@ function logAction(action, username) {
 }
 
 module.exports = { capitalizeWords, filterActiveUsers, logAction };
+
+const mix = [
+    {name: "Bob", isActive: true},
+    {name: "Sam", isActive: false},
+    {name: "Tim", isActive: true}
+]; 
+
+const inactive = [
+    {name: "Bob", isActive: false},
+    {name: "Sam", isActive: false},
+    {name: "Tim", isActive: false}
+]; 
+
+const empty = []; 
+
+console.log(filterActiveUsers(mix));
+console.log(filterActiveUsers(inactive));
+console.log(filterActiveUsers(empty));
+console.log(mix);
